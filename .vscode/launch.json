@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "debugpy",
+            "request": "launch",
+            "name": "Launch Slack Stats",
+            "program": "${workspaceFolder}/src/bot_count.py",
+            "args": ["bot-count"]
+        }
+    ]
+}

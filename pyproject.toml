@@ -1,0 +1,44 @@
+[project]
+name = "slack-stats"
+version = "0.1.0"
+description = "Slackの統計データを取得するツールです"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "click>=8.1.7",
+    "slack-sdk>=3.33.4",
+]
+
+[project.scripts]
+slst = "slack_stats:cli"
+
+[build-system]
+requires = ["hatchling", "setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/slack_stats"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.7.4",
+]
+
+[tool.ruff]
+target-version = "py312"
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "Q",
+    "D",
+    "N",
+    "C90",
+    "UP",
+]
+
+ignore = [
+    "D400",
+    "D415",
+]
