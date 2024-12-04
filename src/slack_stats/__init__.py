@@ -17,6 +17,9 @@ def bot_count(file_path: str) -> None:
     """ボットメッセージ数を表示します。
 
     FILE_PATH: 出力するCSVファイルのパス (デフォルト: bot_message_counts.csv)
+
+    環境変数:
+        SLACK_TOKEN: Slack APIトークンを設定する必要があります。
     """
     print(f"bot_count: {file_path}")
     bot_count_main(file_path)
